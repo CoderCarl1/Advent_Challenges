@@ -1,0 +1,98 @@
+/* =============
+  HEADER
+============= */
+.header {
+  display: flex;
+  align-items: center;
+  background: hsla(var(--bg-nav));
+  gap: 1em;
+  padding: 0 1em;
+  a {
+    text-decoration: none;
+  }
+  h1 a {
+    flex: 1 1 45%;
+    font-family: var(--header-font-family);
+    text-align: center;
+    font-size: var(--fs-800);
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.2ch;
+    word-spacing: 0.5ch;
+  }
+
+  &__nav {
+    flex: 1 1 55%;
+    // width: 100%;
+    position: relative;
+  }
+}
+
+.challenge_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  line-height: 1.75;
+  height: 7.5rem;
+  width: 85%;
+  padding: 0.5em;
+  margin: 1rem auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid hsla(var(--border-grey));
+  box-shadow: inset 0px 0px 2px 3px hsla(var(--border-grey));
+  cursor: pointer;
+
+  &:focus {
+    outline: 4px solid red;
+    outline-offset: 4px;
+  }
+
+  li {
+    position: relative;
+    padding: 0.25em;
+    &:after {
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid hsla(var(--border-grey));
+      width: 90%;
+      left: 5%;
+      bottom: 0;
+    }
+    &:nth-child(odd) {
+      background: rgb(190, 201, 225);
+      color: white;
+    }
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: var(--fs-400);
+    // color: inherit;
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  &__explanation {
+    width: 85%;
+    margin: 1em auto;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 0.25em;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+  .explanation {
+    &__title {
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1rem;
+    }
+    &__text {
+      text-align: center;
+    }
+  }
+}

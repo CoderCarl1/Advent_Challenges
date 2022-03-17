@@ -1,0 +1,39 @@
+/* =============
+  SKIP LINK
+============= */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(1rem, -10rem);
+  transition: transform 0.35s ease-in-out;
+
+  width: 10rem;
+  background: white;
+  font-size: var(--fs-400);
+
+  border: 2px solid hsla(var(--purple));
+  border-radius: 4px;
+}
+.skip-link:focus-within {
+  transform: translate(1rem, 1.5rem);
+  z-index: 2;
+  animation: prompt 3s ease-in-out 2s infinite;
+}
+@keyframes prompt {
+  0% {
+    transform: translate(1rem, 1.5rem);
+  }
+  5% {
+    transform: translate(0.95rem, 1.5rem);
+  }
+  10% {
+    transform: translate(1.1rem, 1.5rem);
+  }
+  15% {
+    transform: translate(1rem, 1.5rem);
+  }
+  100% {
+    transform: translate(1rem, 1.5rem);
+  }
+}
