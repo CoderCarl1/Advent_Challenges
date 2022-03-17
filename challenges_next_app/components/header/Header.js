@@ -69,8 +69,6 @@ export function Header() {
         next: nodeList[1],
       });
     }
-
-    // for Aria-Current
     setCurrentPage(document.location.pathname);
   }, [liNodes === null]);
 
@@ -127,10 +125,6 @@ export function Header() {
           setUlFocused(false);
           listRef.current.focus();
         }
-        // if (event.code === "Tab") {
-        //   setUlFocused(false);
-        //   document.querySelector("main")?.focus();
-        // }
       }
       // ELSE
       if (!ulFocused && liNodes) {
@@ -138,14 +132,6 @@ export function Header() {
           setUlFocused(true);
 
           liNodes.current.focus();
-        } else if (event.shiftKey && event.code === "Tab") {
-          document.querySelector(".header-title").focus();
-        } else if (event.code === "Tab") {
-          document.querySelector("main")?.focus();
-        } else {
-          console.log("====================================");
-          console.log("somehow in the ELSE");
-          console.log("====================================");
         }
       }
     }
@@ -162,11 +148,7 @@ export function Header() {
           <a className="header-title">Challenge Apps</a>
         </Link>
       </h1>
-      <nav
-        className="header__nav"
-        tabIndex={-1}
-        aria-label="Primary navigation"
-      >
+      <nav className="header__nav" aria-label="Primary navigation">
         <div
           id="challenge_list__explanation"
           className="challenge_list__explanation"

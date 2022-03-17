@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./index.scss";
 
 function formatTime(num) {
   num = String(num);
@@ -9,8 +8,8 @@ function formatTime(num) {
 }
 
 export default function Index() {
-  const [minutes, setMinutes] = useState < string > "00";
-  const [seconds, setSeconds] = useState < string > "00";
+  const [minutes, setMinutes] = useState("00");
+  const [seconds, setSeconds] = useState("00");
   const [editingMin, setEditingMin] = useState(false);
   const [editingSec, setEditingSec] = useState(false);
 
