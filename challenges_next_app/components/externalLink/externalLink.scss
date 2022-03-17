@@ -1,3 +1,21 @@
-.external {
-  margin-left: 0.1em;
+a[data-external] {
+  border-bottom: 1px solid black;
+  /* margin-inline: 0.1em; */
+  display: inline-block;
+  /* color: white; */
+  background: rgb(0 0 0 / 9%);
+  padding-inline: 0.5em;
+  &:hover {
+    background: rgb(0 0 0 / 75%);
+    color: white;
+    svg {
+      margin-left: 0.25em;
+      margin-bottom: 0.1em;
+      fill: blue;
+    }
+  }
+  &:focus-visible {
+    outline: 2px solid blue;
+    outline-offset: 0.25em;
+  }
 }
