@@ -86,15 +86,15 @@
     padding: 0.25em;
     border: 2px solid rgba(255, 255, 255, 0.6);
   }
-  .explanation {
-    &__title {
-      display: block;
-      font-weight: bold;
-      text-align: center;
-      font-size: 1rem;
-    }
-    &__text {
-      text-align: center;
-    }
+}
+.explanation {
+  &__title {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+  }
+  &__text {
+    text-align: center;
   }
 }
