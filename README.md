@@ -1,10 +1,10 @@
 # Code Challenges
 
-> [Advent of JS](https://www.adventofjs.com/)
+[Deployed Site](https://advent-challenges.vercel.app/) || Status
 
-> [Advent of CSS](https://www.adventofcss.com/)
+> [Advent of JS](https://www.adventofjs.com/) | [Advent of CSS](https://www.adventofcss.com/)
 
 <details> 
 <summary>Pomodoro Timer</summary>
-  [Repo](/1_Pomodoro)
+  [Repo](/challenges_next_app/pages/pomodoro)
 </details>

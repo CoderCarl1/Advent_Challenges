@@ -58,6 +58,8 @@ export function Header() {
   const [currentPage, setCurrentPage] = useState(null);
   const [data] = useState(challenge_List_Nodes);
   const [liNodes, setLiNodes] = useState(null);
+  const liNodesNull = liNodes === null;
+  const listRefNotNull = listRef.current !== null;
 
   useEffect(() => {
     if (listRef.current) {
@@ -70,7 +72,7 @@ export function Header() {
       });
     }
     setCurrentPage(document.location.pathname);
-  }, [liNodes === null]);
+  }, [liNodesNull, listRefNotNull]);
 
   function handleKeyLI(event) {
     if (liNodes !== null) {
@@ -104,16 +106,17 @@ export function Header() {
     }
   }
 
-  useEffect(() => {
-    if (liNodes !== null) {
-      const { current } = liNodes;
-      current.focus();
+  function changeFocus() {
+    if (liNodes !== null && ulFocused === true) {
+      liNodes.current.focus();
     }
-  }, [liNodes]);
+  }
+
+  useEffect(() => {
+    changeFocus();
+  }, [liNodes, ulFocused, changeFocus]);
 
   function handleKeyPress(event) {
-    console.log("handleKeyPress - KEY CODE  IS => ", event.code);
-
     if (listRef.current !== null) {
       // have they entered in?
       if (ulFocused) {
@@ -130,8 +133,7 @@ export function Header() {
       if (!ulFocused && liNodes) {
         if (event.code === "Enter") {
           setUlFocused(true);
-
-          liNodes.current.focus();
+          changeFocus();
         }
       }
     }
@@ -170,7 +172,6 @@ export function Header() {
           onKeyDown={handleKeyPress}
           aria-labelledby="challenge_list__explanation"
         >
-          {liNodes && console.log("LINODES RENDER ", liNodes)}
           {data.map(({ id, link, text }) => (
             <PrimaryNavLink
               currentPage={currentPage && currentPage.includes(link)}

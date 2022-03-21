@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --min-tap-target-height: 32px;
+  @media (pointer: coarse) {
+    --min-tap-target-height: 48px;
+  }
+}
+
 body,
 h1,
 h2,
@@ -62,6 +69,15 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+@media (pointer: coarse) {
+  input,
+  button,
+  textarea,
+  select {
+    min-height: var(--min-tap-target-height);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
