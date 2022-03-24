@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import ProgressCircle from "./progressCircle";
+import React, { useState, useEffect, useRef } from 'react';
+import ProgressCircle from './progressCircle';
 
 function formatTime(num) {
   num = String(num);
@@ -108,8 +108,8 @@ export default function Index() {
       <ProgressCircle
         progress={progress}
         data-toot
-        style={{ border: "1px dashed hotpink" }}
-        barColor={"255 0 0"}
+        style={{ border: '1px dashed hotpink' }}
+        barColor={'255 0 0'}
       />
       {/* <div className="time">
         <label htmlFor="minutes" aria-label="minutes">

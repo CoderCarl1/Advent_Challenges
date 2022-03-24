@@ -1,0 +1,51 @@
+.todo {
+  align-items: flex-end;
+  background: white;
+  margin: 0.5em;
+  height: 4em;
+  padding: 0.5em;
+  gap: 1em;
+  // justify-content: space-between;
+  &__editing {
+    transform: scale(1.2);
+    background: red;
+  }
+  .todo__label__wrapper {
+    flex: 1 1 75%;
+  }
+  .todo__button__wrapper {
+    flex: 1 1 25%;
+  }
+  &__button {
+    position: relative;
+    margin: 0 auto;
+    width: 2em;
+    aspect-ratio: 1;
+    button {
+      border: 1px solid red;
+      width: 100%;
+      aspect-ratio: 1;
+    }
+    &__label {
+      position: absolute;
+      top: -75%;
+      left: 0;
+      font-weight: bold;
+    }
+  }
+
+  // .mini-menu {
+  //   position: absolute;
+  //   opacity: 0;
+  //   transform: translateY(-100%);
+  //   transition: all 0.35s ease;
+
+  //   &__open {
+  //     transform: translateY(0);
+  //     opacity: 1;
+  //   }
+  //   &__toggle {
+  //     position: relative;
+  //   }
+  // }
+}

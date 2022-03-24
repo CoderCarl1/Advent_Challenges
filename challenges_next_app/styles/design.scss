@@ -10,8 +10,8 @@
   --fs-800: clamp(1rem, 3vw + 1rem, 1.5rem);
   --fs-600: 1.25rem;
   --fs-400: 1rem;
-  --header-font-family: "Satisfy", cursive;
-  font-family: "Xanh Mono", monospace;
+  --header-font-family: 'Satisfy', cursive;
+  font-family: 'Xanh Mono', monospace;
 }
 @media only screen and (min-width: 30em) {
   :root {
@@ -67,4 +67,23 @@ kbd {
   background: white;
   color: black;
   font-weight: 600;
+}
+
+[data-flexrow] {
+  display: flex;
+}
+
+.icon {
+  // &-wrapper {
+
+  // }
+  &-done {
+    fill: green;
+  }
+  &-delete {
+    fill: black;
+  }
+  &-edit {
+    fill: rgb(96, 80, 245);
+  }
 }
